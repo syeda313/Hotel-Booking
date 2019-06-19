@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Reem Naqvi, 6/9/19. All Rights Reserved. -->
+<!-- uses a scrollview to scroll, and ConstrainsLayout to position correctly -->
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ef9a9a"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClick"
+        tools:context="DisplayActivity">
+
+        <TextView
+            android:id="@+id/txt_label"
+            android:layout_width="148dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            android:text="@string/name1"
+            android:textColor="#3e2723"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_label1"
+            android:layout_width="150dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/email1"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label" />
+
+        <TextView
+            android:id="@+id/txt_label2"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/title2"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label1" />
+
+        <TextView
+            android:id="@+id/txt_label3"
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/room1"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label2" />
+
+        <TextView
+            android:id="@+id/txt_label5"
+            android:layout_width="147dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/dates1"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label4" />
+
+        <TextView
+            android:id="@+id/txt_label4"
+            android:layout_width="147dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/date1"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label3" />
+
+        <TextView
+            android:id="@+id/txt_label6"
+            android:layout_width="148dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:text="@string/title"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label5" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="148dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/guests"
+            android:textColor="#3e2723"
+            android:textSize="20sp"
+            app:fontFamily="monospace"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_label6" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="154dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="68dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_email"
+            android:layout_width="184dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="64dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label1"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_hotel"
+            android:layout_width="165dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="72dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+
+        <TextView
+            android:id="@+id/txt_room"
+            android:layout_width="161dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="72dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_hotel" />
+
+        <TextView
+            android:id="@+id/txt_checkin"
+            android:layout_width="164dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="60dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label4"
+            app:layout_constraintTop_toBottomOf="@+id/txt_room" />
+
+        <TextView
+            android:id="@+id/txt_checkout"
+            android:layout_width="171dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="68dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label5"
+            app:layout_constraintTop_toBottomOf="@+id/txt_checkin" />
+
+        <TextView
+            android:id="@+id/txt_breakfst"
+            android:layout_width="147dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="60dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toEndOf="@+id/txt_label6"
+            app:layout_constraintTop_toBottomOf="@+id/txt_checkout" />
+
+        <TextView
+            android:id="@+id/txt_guests"
+            android:layout_width="147dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginBottom="32dp"
+            android:textColor="#1a237e"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/txt_breakfst"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

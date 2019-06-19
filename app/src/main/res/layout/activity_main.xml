@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Reem Naqvi, 6/9/19. All Rights Reserved. -->
+<!-- uses a scrollview to scroll, and ConstrainsLayout to position correctly -->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7ECB92"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <EditText
+            android:id="@+id/edtxt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="56dp"
+            android:ems="10"
+            android:hint="@string/name"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            android:textColor="#1a237e"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edtxt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="26dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            android:textColor="#1a237e"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_name" />
+
+        <Spinner
+            android:id="@+id/spnr_hotel"
+            android:layout_width="197dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginLeft="26dp"
+            android:layout_marginTop="26dp"
+            android:textSize="20sp"
+            app:fontFamily="serif-monospace"
+            android:background="#e57373"
+            android:textColor="#311b92"
+            android:entries="@array/hotels"
+            app:layout_constraintStart_toEndOf="@+id/txt_h"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_email" />
+
+        <Spinner
+            android:id="@+id/spnr_room"
+            android:layout_width="195dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="25dp"
+            android:textSize="20sp"
+            app:fontFamily="serif-monospace"
+            android:background="#e57373"
+            android:textColor="#311b92"
+            android:entries="@array/rooms"
+            app:layout_constraintStart_toEndOf="@+id/txt_rmtype"
+            app:layout_constraintTop_toBottomOf="@+id/spnr_hotel" />
+
+        <TextView
+            android:id="@+id/txt_h"
+            android:layout_width="92dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/title1"
+            android:textSize="22sp"
+            android:textColor="#1a237e"
+            app:fontFamily="serif-monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_email" />
+
+        <TextView
+            android:id="@+id/txt_rmtype"
+            android:layout_width="94dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/room"
+            android:textSize="22sp"
+            android:textColor="#1a237e"
+            app:fontFamily="serif-monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_h" />
+
+        <EditText
+            android:id="@+id/edtxt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:hint="@string/date"
+            android:inputType="date"
+            android:textSize="20sp"
+            android:textColor="#1a237e"
+            app:fontFamily="sans-serif-condensed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_rmtype" />
+
+        <EditText
+            android:id="@+id/edtxt_dates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="26dp"
+            android:ems="10"
+            android:textSize="20sp"
+            app:fontFamily="sans-serif-condensed"
+            android:textColor="#1a237e"
+            android:hint="@string/dates"
+            android:inputType="date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_date" />
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="32dp"
+            android:onClick="onClick"
+            android:text="@string/submit"
+            android:textSize="20sp"
+            android:background="#e57373"
+            android:textColor="#311b92"
+            app:fontFamily="sans-serif-medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.421"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_guestNum" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="199dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toEndOf="@+id/txt_brfast"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_dates">
+
+            <RadioButton
+                android:id="@+id/rdbtn_no"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:textSize="20sp"
+                app:fontFamily="sans-serif-condensed"
+                android:textColor="#311b92"
+                android:background="#e57373"
+                android:layout_weight="1"
+                android:text="@string/no" />
+
+            <RadioButton
+                android:id="@+id/rdbtn_yes"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:textSize="20sp"
+                android:textColor="#311b92"
+                android:background="#e57373"
+                app:fontFamily="sans-serif-condensed"
+                android:layout_weight="1"
+                android:text="@string/yes" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txt_brfast"
+            android:layout_width="146dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/title"
+            android:textColor="#1a237e"
+            android:textSize="22sp"
+            app:fontFamily="serif-monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtxt_dates" />
+
+        <TextView
+            android:id="@+id/txt_guest"
+            android:layout_width="142dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/guests"
+            android:textColor="#1a237e"
+            android:textSize="22sp"
+            app:fontFamily="serif-monospace"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <EditText
+            android:id="@+id/edtxt_guestNum"
+            android:layout_width="98dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="19dp"
+            android:ems="10"
+            android:textSize="20sp"
+            android:textColor="#1a237e"
+            app:fontFamily="sans-serif-condensed"
+            android:hint="@string/num"
+            android:inputType="number"
+            app:layout_constraintStart_toEndOf="@+id/txt_guest"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
